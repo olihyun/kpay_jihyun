@@ -87,9 +87,8 @@
 {
   "brName":"판"
 }
-- Send 버튼클릭
-
-4. Response : 예시결과
+4. Send 버튼클릭
+5. Response : 예시결과
 [
 {
 "brName": "A",
