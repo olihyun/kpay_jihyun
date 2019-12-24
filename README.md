@@ -34,7 +34,39 @@
 - Run -> payJihyunApplication
 
 ## 실행방법
-크롬 앱스토어 "Talend API Tester - Free Edition" 설치 및 이용함
+* 데이터는 사전에 Insert되어 있다고 가정한다. (과제 제시)
+  * Database : pay_assign(utf8 설정), Table : ac_list, tr_list, br_list
+  * 참고
+      * 데이터베이스 : CREATE DATABASE PAY_ASSIGN DEFAULT CHARACTER SET UTF8;
+      * 테이블 생성
+      1. 거래내역 : 
+      CREATE TABLE tr_list
+      (
+          tr_dt   VARCHAR(8)
+        , acno    VARCHAR(8)
+        , tr_s    INT
+        , tr_a    LONG
+        , fee     LONG
+        , cncl_yn VARCHAR(1)
+        , PRIMARY KEY (tr_dt, acno, tr_s)
+      );
+      2. 계좌정보 : 
+      CREATE TABLE ac_list
+      (
+          acno    VARCHAR(8)
+        , ac_nm   VARCHAR(50)
+        , br_cod  VARCHAR(1)
+        , PRIMARY KEY (acno)
+      );
+      3. 관리점정보 : 
+      CREATE TABLE br_list
+      (
+          br_cod  VARCHAR(1)
+        , br_nm   VARCHAR(50)
+        , PRIMARY KEY (br_cod)
+      );
+  
+* 빌드 진행후, 크롬 앱스토어 "Talend API Tester - Free Edition" 설치하여 아래 설정을 통해 결과 확인함
 
 ### 1번 API
 1. Method : GET 설정, http://localhost:8080/one
