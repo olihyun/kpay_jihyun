@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
 @JdbcTest
 @ActiveProfiles("application.properties")
-@ComponentScan("com.pay_assign.pay_jihyun")
+@ComponentScan("com.pay_assign.kpay_jihyun")
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class ServiceTest {
 
