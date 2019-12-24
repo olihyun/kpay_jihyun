@@ -1,4 +1,5 @@
-# pay_jihyun
+# kpay_jihyun
+카카오페이 과제
 
 # 개발 프레임웍크 및 버전
 
@@ -9,20 +10,20 @@
 
 # 문제해결 방법
 
-- 1번 API
-* HTTP Method Get 
+1. 1번 API
+* HTTP Method Get 사용
 * 연도별 합계금액이 가장 많은 고객을 추출하였음
 
-- 2번 API
-* HTTP Method Get
+2. 2번 API
+* HTTP Method Get 사용
 * 연도별 거래가 없는 고객을 추출하였음
 
-- 3번 API
-* HTTP Method Get
+3. 3번 API
+* HTTP Method Get 사용
 * 연도별 관리점별 거래금액 합계를 구하고 합계금액이 큰 순서로 추출하였음
 
-- 4번 API
-* HTTP Method Post
+4. 4번 API
+* HTTP Method Post 사용
 * 분당점과 판교점을 통폐합하여 판교점으로 이관된 것을 계좌정보의 관리점을 이관한 것처럼 추출하여 적용함
 * 지점명을 입력하면 해당 지점의 거래금액 합계를 추출함
 * 찾는 지점이 없으면 404 에러메세지가 나오게끔 적용함
