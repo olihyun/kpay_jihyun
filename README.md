@@ -31,40 +31,15 @@
 # 빌드 및 실행 방법
 
 ## 빌드
-- Run -> payJihyunApplication
+- Run 버튼 클릭 -> PayJihyunApplication (IntelliJ)
+  또는 PayJihyunApplication(main.java.com.pay_assign.kpay_jihyun) 소스에 마우스 우클릭하여 'Run PayJihyunApplication' 선택
 
 ## 실행방법
-* 데이터는 사전에 Insert되어 있다고 가정한다. (과제 제시)
-  * Database : pay_assign(utf8 설정), Table : ac_list, tr_list, br_list
-  * 참고
-      * 데이터베이스 : CREATE DATABASE PAY_ASSIGN DEFAULT CHARACTER SET UTF8;
-      * 테이블 생성
-      1. 거래내역 : 
-      CREATE TABLE tr_list
-      (
-          tr_dt   VARCHAR(8)
-        , acno    VARCHAR(8)
-        , tr_s    INT
-        , tr_a    LONG
-        , fee     LONG
-        , cncl_yn VARCHAR(1)
-        , PRIMARY KEY (tr_dt, acno, tr_s)
-      );
-      2. 계좌정보 : 
-      CREATE TABLE ac_list
-      (
-          acno    VARCHAR(8)
-        , ac_nm   VARCHAR(50)
-        , br_cod  VARCHAR(1)
-        , PRIMARY KEY (acno)
-      );
-      3. 관리점정보 : 
-      CREATE TABLE br_list
-      (
-          br_cod  VARCHAR(1)
-        , br_nm   VARCHAR(50)
-        , PRIMARY KEY (br_cod)
-      );
+* 데이터는 사전에 Insert되어 있다고 가정한다. (과제 제시) : 아래 정보는 소스 참고용입니다.
+  * Database : pay_assign(utf8 설정), Table : ac_list(계좌정보), tr_list(거래내역), br_list(관리점정보)
+   * ac_list(계좌정보) 컬럼 : acno(계좌번호), ac_nm(계좌명), br_cod(관리점코드)
+   * tr_list(거래내역) 컬럼 : tr_dt(거래일자),	acno(계좌번호),	tr_s(거래번호),	tr_a(금액),	fee(수수료),	cncl_yn(취소여부)
+   * br_list(관리점정보) 컬럼 : br_cod(관리점코드), br_nm(관리점명)
   
 * 빌드 진행후, 크롬 앱스토어 "Talend API Tester - Free Edition" 설치하여 아래 설정을 통해 결과 확인함
 
